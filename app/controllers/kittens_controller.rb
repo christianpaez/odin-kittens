@@ -5,11 +5,20 @@ class KittensController < ApplicationController
   # GET /kittens.json
   def index
     @kittens = Kitten.all
+    puts request.format
+    respond_to do |format|
+      format.html
+      format.json { render json: {message: "Kittens retrieved!", data:@kittens } }
+    end
   end
 
   # GET /kittens/1
   # GET /kittens/1.json
   def show
+    respond_to do|format|
+      format.html
+      format.json { render json: {message: "Kitten retrived with id:#{@kitten["id"]}", data: @kitten} }
+    end
   end
 
   # GET /kittens/new
