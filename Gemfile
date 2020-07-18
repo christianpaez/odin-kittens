@@ -19,8 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 # faker
 gem 'faker'
 
-# rest-client
-gem 'rest-client', '~> 1.8'
+# rest client
+gem 'rest-client'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
